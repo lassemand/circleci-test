@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+    - image: circleci/java:8
+    steps:
+    - checkout
+
+workflows:
+build_test_release:
+    jobs:
+    - build
+
